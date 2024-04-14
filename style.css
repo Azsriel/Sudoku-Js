@@ -1,0 +1,38 @@
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+  }
+
+  .sudoku-cell {
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .sudoku-input {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .sudoku-cell:hover {
+    background-color: #f0f0f0;
+  }
+
+  .sudoku-cell:nth-child(3n),
+  .sudoku-cell:nth-child(6n) {
+    border-right: 2px solid black;
+  }
+
+  .sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+  .sudoku-cell:nth-child(n + 46):nth-child(-n + 54),
+  .sudoku-cell:nth-child(n + 73):nth-child(-n + 81) {
+    border-bottom: 2px solid black;
+  }
