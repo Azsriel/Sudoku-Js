@@ -231,10 +231,12 @@ function finish() {
     d.style.display = "none";
     const b = document.getElementById("sudoku-board");
     b.style.display = "none";
+    const g = document.getElementById("giveup");
+    g.style.display = "none";
     const w = document.getElementById("win");
     w.style.display = "flex";
-    const g = document.getElementById("again");
-    g.style.display = "flex";
+    const a = document.getElementById("again");
+    a.style.display = "flex";
 
 }
 
