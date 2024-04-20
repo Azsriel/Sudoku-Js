@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Sudoku Game</title>
-  <style>
-    
-  </style>
-</head>
-<body style="display: flex;">
-  <h1>Sudoku Game</h1>
-  <div class="sudoku-board" id="sudoku-board">
 
-  </div>
-  <div>
-    <button onclick="test()">test</button>
-  </div>
-  <script src="script.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sudoku Game</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="main">
+        <div class="title">
+            <h1><strong>Sudoku</strong></h1>
+        </div>
+        <div class="start-screen" id="start-screen">
+            <div class="instructions" id="instructions">
+                <ul>
+                    <li>Sudoku grid consists of 9x9 spaces.</li>
+                    <li>You can use only numbers from 1 to 9.</li>
+                    <li>Each 3×3 block can only contain numbers from 1 to 9.</li>
+                    <li>Each vertical column can only contain numbers from 1 to 9.</li>
+                    <li>Each horizontal row can only contain numbers from 1 to 9.</li>
+                    <li>Each number in the 3×3 block, vertical column or horizontal row can be used only once.</li>
+                    <li>The game is over when the whole Sudoku grid is correctly filled with numbers.</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button onclick="startGame()">Start Game</button>
+                <button onclick="openInstructions()">Instructions</button>
+            </div>
+        </div>
+        <div class="difficulty" id="difficulty">
+            <h1>Choose your difficulty</h1>
+            <div class="buttons">
+                <button onclick="initializeGame('easy')">Easy</button>
+                <button onclick="initializeGame('medium')">Medium</button>
+                <button onclick="initializeGame('hard')">Hard</button>
+                <button onclick="initializeGame('very hard')">Very Hard</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="sudoku-board" id="sudoku-board">
+            </div>
+            <div class="buttons" id="giveup" style="display: none;">
+                <button onclick="giveUp()">Give Up?</button>
+            </div>
+        </div>
+        <div id="win" class="title" style="display: none;">
+            <h1><strong>You Win!!!</strong></h1>
+        </div>
+        <div id="again" class="buttons" style="display: none;">
+            <button onclick="reload()">Play Again?</button>
+        </div>
+
+    </div>
+    <div class="background"></div>
+    <script src="script.js"></script>
 </body>
+
 </html>
